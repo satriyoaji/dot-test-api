@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 
@@ -58,7 +59,8 @@ class FetchRajaongkirData extends Command
         $provinceNames = array_column($provinces['rajaongkir']['results'], 'province');
         foreach ($provinceNames as $provinceName) {
             DB::table('provinces')->updateOrInsert(
-                ['name' => $provinceName]
+                ['name' => $provinceName],
+                ['created_at' => Carbon::now(), 'updated_at' => Carbon::now()]
             );
         }
     }
@@ -75,6 +77,8 @@ class FetchRajaongkirData extends Command
                     'province_id' => $cityDatum['province_id'],
                     'type' => $cityDatum['type'],
                     'postal_code' => $cityDatum['postal_code'],
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now()
                 ]
             );
         }
