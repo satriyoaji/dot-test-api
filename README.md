@@ -84,8 +84,10 @@ php artisan seed:rajaongkir
 php artisan serve
 ```
 ### API docs:
+``` bash
 [GET] http://localhost:8000/api/provinces?id={id} -> id Province
 [GET] http://localhost:8000/api/cities?id={id} -> id City
+```
 
 Goto Sprint 2:
 [Sprint 2](https://github.com/satriyoaji/dot-test-api/tree/feat/sprint2)
