@@ -6,61 +6,98 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+# Laravel API Project with Repository-Service Pattern using MongoDB and Unit Tests Integrated
+This repo is an example implementation of an API project with implement repository-service pattern, clean code, OOP, and strict class. This repo also provide unit tests in every layer to keep code coverage.
 
-## About Laravel
+## Installation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+#### Dependencies
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[Laravel](https://laravel.com)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[MongoDB PHP Driver](https://www.mongodb.com/docs/drivers/php/#installation)
 
-## Learning Laravel
+[Official PHP Page](http://php.net/manual/en/mongodb.installation.php)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### Clone this repo
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Enter this repo folder
 
-## Laravel Sponsors
+``` bash
+cd dot-test-api
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Install Dependencies
 
-### Premium Partners
+``` bash
+composer install
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+#### Configuration
 
-## Contributing
+Generate .env file
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+cp .env.example .env
+```
 
-## Code of Conduct
+Generate APP_KEY
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+``` bash
+php artisan key:generate
+```
 
-## Security Vulnerabilities
+#### Database Instance -> You have to run your MySQL Database and create one new Database instance to connect it.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### Database Environment
+
+``` bash
+# Adjust your DB env dependencies (for example)
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=dot_test_api
+DB_USERNAME=root
+DB_PASSWORD=password
+
+....
+
+# adjut additional env vars for Sprint 1 & Sprint 2
+RAJAONGKIR_API_KEY=0df6d5bf733214af6c6644eb8717c92c
+DATA_SOURCE=DATABASE  # you can change to REMOTE
+```
+
+#### Run
+
+``` bash
+# cache clear environment file
+php artisan config:cache
+php artisan config:clear
+
+# Migration 
+php artisan migrate
+
+# Run API service
+php artisan serve
+```
+
+## Features
+
+### Feature Sprint docs
+```
+<a href="https://github.com/satriyoaji/dot-test-api/tree/feat/sprint1"><b>Sprint 1 Feature</b></a>
+
+<a href="https://github.com/satriyoaji/dot-test-api/tree/feat/sprint2"><b>Sprint 2 Feature</b></a>
+
+### Others
+- Unit Test using PHPUnit Test
+
+``` bash
+$ ./vendor/bin/phpunit
+```
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
