@@ -74,19 +74,44 @@ php artisan serve
 
 ## Features
 
-### Feature Sprint docs
+### Feature Sprint 2 docs
 
-[Sprint 1](https://github.com/satriyoaji/dot-test-api/tree/feat/sprint1)
+-  fill the DATA_SOURCE with `REMOTE` or `DATABASE` to swap either using Remote data from RajaOngkir or local data from Database in `.env` file
+``` bash
+# Run API service
+php artisan serve
+```
 
-[Sprint 2](https://github.com/satriyoaji/dot-test-api/tree/feat/sprint2)
+### API docs for authentication:
+- [POST] http://localhost:8000/api/auth/register
+- [POST] http://localhost:8000/api/auth/login
+
+### Request & Response example
+```bash
+### for Register
+curl --location 'localhost:8000/api/auth/register' \
+--form 'name="Satriyo"' \
+--form 'email="satriyoaji27@gmail.com"' \
+--form 'password="Password123"' \
+--form 'confirm_password="Password123"'
+
+### for Login
+curl --location 'localhost:8000/api/auth/login' \
+--form 'email="satriyoaji27@gmail.com"' \
+--form 'password="Password123"'
+```
 
 ```
-### Others
+### Unit Test Feature
 - Unit Test using PHPUnit Test
 
 ``` bash
 $ ./vendor/bin/phpunit
 ```
+
+Goto Sprint 1:
+[Sprint 1](https://github.com/satriyoaji/dot-test-api/tree/feat/sprint1)
+
 
 ## License
 
