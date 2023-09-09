@@ -74,10 +74,20 @@ php artisan serve
 
 ## Features
 
-### Feature Sprint docs
+### Feature Sprint 1 docs
 
-[Sprint 1](https://github.com/satriyoaji/dot-test-api/tree/feat/sprint1)
+``` bash
+# run the data seeder from RajaOngkir
+php artisan seed:rajaongkir
 
+# Run API service
+php artisan serve
+```
+### API docs:
+[GET] http://localhost:8000/api/provinces?id={id} -> id Province
+[GET] http://localhost:8000/api/cities?id={id} -> id City
+
+Goto Sprint 2:
 [Sprint 2](https://github.com/satriyoaji/dot-test-api/tree/feat/sprint2)
 
 ## License
