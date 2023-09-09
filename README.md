@@ -85,11 +85,12 @@ php artisan serve
 ## Features
 
 ### Feature Sprint docs
+
+[Sprint 1](https://github.com/satriyoaji/dot-test-api/tree/feat/sprint1)
+
+[Sprint 2](https://github.com/satriyoaji/dot-test-api/tree/feat/sprint2)
+
 ```
-<a href="https://github.com/satriyoaji/dot-test-api/tree/feat/sprint1"><b>Sprint 1 Feature</b></a>
-
-<a href="https://github.com/satriyoaji/dot-test-api/tree/feat/sprint2"><b>Sprint 2 Feature</b></a>
-
 ### Others
 - Unit Test using PHPUnit Test
 
