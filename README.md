@@ -6,7 +6,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-# Laravel API Project with Repository-Service Pattern using MongoDB and Unit Tests Integrated
+# Laravel API Project test with MySQL and Unit Tests Integrated
 This repo is an example implementation of an API project with implement repository-service pattern, clean code, OOP, and strict class. This repo also provide unit tests in every layer to keep code coverage.
 
 ## Installation
@@ -15,7 +15,7 @@ This repo is an example implementation of an API project with implement reposito
 
 [Laravel](https://laravel.com)
 
-[MongoDB PHP Driver](https://www.mongodb.com/docs/drivers/php/#installation)
+[MySQL Database]([https://www.mongodb.com/docs/drivers/php/#installation](https://dev.mysql.com/downloads/connector/j/))
 
 [Official PHP Page](http://php.net/manual/en/mongodb.installation.php)
 
